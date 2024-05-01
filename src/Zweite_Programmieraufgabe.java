@@ -31,7 +31,12 @@ public class Zweite_Programmieraufgabe implements StackInterface<Integer> {
 
     @Override
     public Integer pop() throws IllegalStateException {
-        return 0;
+        int i = stack_array[stack_array.length -1];
+        if(stack_array.length>1)
+            System.arraycopy(stack_array, 0, stack_array, 0, stack_array.length - 1);
+        else
+            stack_array = new int[]{};
+        return i;
     }
 
     @Override
