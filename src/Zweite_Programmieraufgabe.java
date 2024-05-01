@@ -36,15 +36,16 @@ public class Zweite_Programmieraufgabe implements StackInterface<Integer> {
 
     @Override
     public Integer peek() throws IllegalStateException {
-        return 0;
+        return stack_array[stack_array.length -1];
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return stack_array.length == 0;
     }
 
     @Override
     public void clear() {
+        stack_array = new int[]{};
     }
 }
