@@ -3,7 +3,9 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Zweite_Programmieraufgabe implements StackInterface<String> {
+public class Zweite_Programmieraufgabe implements StackInterface<Integer> {
+    public int max = 1;
+    public int[] stack_array = new int[max];
     public static void main(String[] args) {
         try {
             File file = new File("IntSeq100.txt");
@@ -20,24 +22,21 @@ public class Zweite_Programmieraufgabe implements StackInterface<String> {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        int max = 1;
-        int[] stack_array = new int[max];
     }
 
-
     @Override
-    public void push(String newEntry) {
+    public void push(Integer newEntry) {
 
     }
 
     @Override
-    public String pop() throws IllegalStateException {
-        return "";
+    public Integer pop() throws IllegalStateException {
+        return 0;
     }
 
     @Override
-    public String peek() throws IllegalStateException {
-        return "";
+    public Integer peek() throws IllegalStateException {
+        return 0;
     }
 
     @Override
@@ -47,6 +46,5 @@ public class Zweite_Programmieraufgabe implements StackInterface<String> {
 
     @Override
     public void clear() {
-
     }
 }
