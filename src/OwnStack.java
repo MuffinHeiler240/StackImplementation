@@ -5,7 +5,7 @@ public class OwnStack implements StackInterface<Integer> {
     @Override
     public void push(Integer newEntry) {
         if(stack_array[stack_array.length-1] != null){
-            Integer[] temp_stack_array= new Integer[(stack_array.length-1)*2];
+            Integer[] temp_stack_array= new Integer[(stack_array.length)*2];
             for (int i = 0; i < stack_array.length; i++) {
                 temp_stack_array[i] = stack_array[i];
             }
