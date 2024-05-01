@@ -66,6 +66,6 @@ public class Zweite_Programmieraufgabe implements StackInterface<Integer> {
 
     @Override
     public void clear() {
-        stack_array = new Integer[]{};
+        stack_array = new Integer[max];
     }
 }
