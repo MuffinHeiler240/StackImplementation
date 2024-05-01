@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Zweite_Programmieraufgabe Zweite_Programmieraufgabe = new Zweite_Programmieraufgabe();
+        OwnStack Stack = new OwnStack();
         try {
             File file = new File("src/IntSeq100.txt");
             Scanner scanner = new Scanner(file);
@@ -15,7 +15,8 @@ public class Main {
             }
             scanner.close();
             for (int i = 0; i < data.size(); i++) {
-                Zweite_Programmieraufgabe.push(data.get(i));
+                Stack.push(data.get(i));
+                System.out.println(Stack.peek());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
