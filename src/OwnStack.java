@@ -1,10 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
-
-public class Zweite_Programmieraufgabe implements StackInterface<Integer> {
+public class OwnStack implements StackInterface<Integer> {
     public int max = 1;
     public Integer [] stack_array = new Integer [max];
 
