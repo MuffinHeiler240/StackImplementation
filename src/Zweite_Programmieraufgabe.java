@@ -25,6 +25,7 @@ public class Zweite_Programmieraufgabe implements StackInterface<Integer> {
                 return;}
             i++;
         }
+
     }
 
     @Override

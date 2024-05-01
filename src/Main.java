@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Zweite_Programmieraufgabe Zweite_Programmieraufgabe = new Zweite_Programmieraufgabe();
         try {
-            File file = new File("IntSeq100.txt");
+            File file = new File("src/IntSeq100.txt");
             Scanner scanner = new Scanner(file);
             ArrayList<Integer> data = new ArrayList<>();
             while (scanner.hasNextInt()) {
