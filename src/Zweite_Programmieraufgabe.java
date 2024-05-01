@@ -27,7 +27,16 @@ public class Zweite_Programmieraufgabe implements StackInterface<Integer> {
 
     @Override
     public void push(Integer newEntry) {
-
+        if(stack_array[stack_array.length-1] != null)
+            System.arraycopy(stack_array,0,stack_array,0,(stack_array.length-1)*2);
+        int i=0;
+        while(i>=0){
+            Integer Value = stack_array[i];
+            if(Value == null){
+                stack_array[i] = newEntry;
+                return;}
+            i++;
+        }
     }
 
     @Override
