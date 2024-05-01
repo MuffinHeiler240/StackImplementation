@@ -1,11 +1,12 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Zweite_Programmieraufgabe implements StackInterface<Integer> {
     public int max = 1;
-    public int[] stack_array = new int[max];
+    public Integer [] stack_array = new Integer [max];
     public static void main(String[] args) {
         try {
             File file = new File("IntSeq100.txt");
@@ -31,27 +32,40 @@ public class Zweite_Programmieraufgabe implements StackInterface<Integer> {
 
     @Override
     public Integer pop() throws IllegalStateException {
-        int i = stack_array[stack_array.length -1];
-        try {
-            System.arraycopy(stack_array, 0, stack_array, 0, stack_array.length - 1);
-        }catch (Exception e) {
-            new Error(e.getLocalizedMessage());
+
+        int i=stack_array.length-1;
+        while(i>=0){
+            Integer Value = stack_array[i];
+            if(Value != null){
+                stack_array[i] = null;
+                return Value;}
+            i--;
         }
-        return i;
+        return null;
     }
 
     @Override
     public Integer peek() throws IllegalStateException {
-        return stack_array[stack_array.length -1];
+        int i=stack_array.length-1;
+        while(i>=0){
+            if(stack_array[i] != null)
+                return stack_array[i];
+            i--;
+        }
+        return null;
     }
 
     @Override
     public boolean isEmpty() {
-        return stack_array.length == 0;
+        for (Integer i:stack_array) {
+            if(i != null)
+                return false;
+        }
+        return true;
     }
 
     @Override
     public void clear() {
-        stack_array = new int[]{};
+        stack_array = new Integer[]{};
     }
 }
